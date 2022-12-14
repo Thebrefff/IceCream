@@ -27,4 +27,8 @@
   background-image: url("../images/demo.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.test {
+  color: blueviolet;
 }/*# sourceMappingURL=main.css.map */
