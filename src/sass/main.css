@@ -3,47 +3,218 @@
  * Główny plik dla stylów.
  * Wszystkie partials podłączamy tutaj.
  */
-:root {
-  --main-pink-bg-color: #ffb8ca;
-  --light-pink-bg-color: #fff5f6;
-  --dark-pink-bg-color: #e17992;
-  --main-green-bg-color: #c2e297;
-  --main-brown-bg-color: #f0d1a5;
-  --main-white-color: #ffffff;
-  --main-black-color: #000000;
-  --main-grey-color: #907e82;
-  --dark-pink-color: #d41443;
-  --main-pink-color: #ffa5ba;
-  --main-font: "DM Sans", sans-serif;
-  --secondary-font: "Titan One", cursive;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.example {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #424242;
-  max-width: 960px;
-  padding: 16px;
+body {
+  font-family: "Titan One", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
-.example code {
-  font-family: monospace;
-  font-size: 16px;
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  margin: 0;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+.footer {
+  background-color: #FFF5F6;
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 768px) {
+  .footer__column {
+    display: flex;
+    margin-bottom: 91px;
+    justify-content: space-between;
+  }
+}
+.footer__motto {
+  margin-left: 20px;
+  margin-top: 0;
+  margin-bottom: 43px;
+  width: 234px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer__motto {
+    margin-left: 36px;
+    width: 340px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__motto {
+    margin-left: 114px;
+    width: 472px;
+  }
+}
+.footer__motto--text1 {
+  font-family: "Titan One";
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #FFA5BA;
+  margin-bottom: 17px;
+}
+@media screen and (min-width: 768px) {
+  .footer__motto--text1 {
+    font-family: "Titan One";
+    font-size: 26px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__motto--text1 {
+    font-family: "Titan One";
+    font-size: 30px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+}
+.footer__motto--text2 {
+  font-family: "Titan One";
+  font-size: 34px;
+  line-height: 1.1;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #D41443;
+}
+@media screen and (min-width: 768px) {
+  .footer__motto--text2 {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__motto--text2 {
+    font-size: 59px;
+    line-height: 1.1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__comunication {
+    display: flex;
+    flex-direction: column;
+    margin-right: 36px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__comunication {
+    margin-right: 121px;
+  }
+}
+.footer__social-media {
+  display: flex;
+  gap: 28px;
+  justify-content: flex-end;
+  margin-bottom: 46px;
+  width: 100%;
+}
+.footer__social-media--icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgb(254, 165, 187);
+  display: flex;
+  justify-content: center;
+}
+.footer__social-media--icon:hover {
+  background-color: #D41443;
+  border-radius: 50%;
+}
+.footer__social-media--Git {
+  width: 20px;
+  height: 34px;
+}
+.footer__social-media--telegram {
+  width: 22px;
+  height: 34px;
+}
+.footer__social-media--facebook {
+  width: 10px;
+  height: 34px;
+}
+.footer__contact {
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+  margin-bottom: 43px;
+  width: 100%;
+}
+.footer__contact--text {
+  font-family: "DM Sans";
+  font-size: 12px;
+  line-height: 1.8;
   font-weight: 700;
-  background-color: #009688;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 2px;
+  color: rgb(0, 0, 0);
 }
-
-.example .background {
-  height: 240px;
-  background-image: url("../images/demo.jpg");
-  background-size: cover;
-  background-position: center;
+@media screen and (min-width: 768px) {
+  .footer__contact--text {
+    font-size: 14px;
+  }
 }
-
-.test {
-  color: blueviolet;
+@media screen and (min-width: 1200px) {
+  .footer__contact--text {
+    font-size: 16px;
+  }
+}
+.footer__contact--tel {
+  font-family: "DM Sans";
+  font-size: 12px;
+  line-height: 1.8;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(212, 20, 67);
+}
+@media screen and (min-width: 768px) {
+  .footer__contact--tel {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__contact--tel {
+    font-size: 16px;
+  }
+}
+.footer__right {
+  border-top: solid #E1E1E1 1px;
+  width: 100%;
+}
+.footer__right--text {
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgb(144, 126, 130);
+  text-align: center;
+  padding: 22px 91px 25px 80px;
 }/*# sourceMappingURL=main.css.map */
