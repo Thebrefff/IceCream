@@ -1,3 +1,95 @@
 .about {
-  background-color: var(--dark-pink-bg-color);
+  background-color: $lightPinkBgColor;
+}
+
+.about__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__header {
+  width: 62.5%;
+  display: flex;
+  flex-direction: column;
+  margin: 125px 0 26px 0;
+}
+
+.about__title {
+  font-family: $secondaryFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.167;
+  text-align: center;
+  text-transform: uppercase;
+  color: $mainPinkColor;
+  margin-bottom: 15px;
+}
+
+.about__heading {
+  font-family: $secondaryFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.148;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $darkPinkColor;
+  margin: 0;
+}
+
+.about__image {
+  width: 87.5%;
+  margin: 0 0 46px 0;
+}
+
+.about-description__wrapper {
+  width: 68.75%;
+  background-image: url('./images/about/milk_splash.png');
+}
+
+.about__cow-description {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.59;
+  color: $mainBlackColor;
+  margin: 0 0 32px 0;
+}
+
+.about__cow-description_2 {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.59;
+  color: $mainGreyColor;
+  margin: 0 0 17px 0;
+}
+
+.about__button {
+  background-color: $mainWhiteColor;
+  border-radius: 22px;
+  border: none;
+  padding: 13px 37.5px 13px 37.5px;
+  cursor: pointer;
+  margin: 0 0 39px 0;
+}
+
+.button__text {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  color: $darkPinkColor;
+  margin: 0 0 0 0;
+}
+
+.about__button-icon {
+  fill: $mainWhiteColor;
+  scale: 1.8;
 }
