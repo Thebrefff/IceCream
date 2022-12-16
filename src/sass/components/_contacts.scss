@@ -1,0 +1,404 @@
+// moje globalne resety
+h1,
+h2,
+h4,
+h5,
+p,
+ul,
+address,
+fieldset,
+textarea,
+figure {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-style: normal;
+  resize: none;
+}
+
+// ====================================MOBILE====================================
+.contacts-section {
+  padding-top: 56.4px;
+  margin-top: 86px;
+
+  &__header {
+    visibility: hidden;
+  }
+}
+// ======== SIATKA
+.grid {
+  background-color: $lightPinkBgColor;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 54px;
+
+  // Karta wychodząca poza tło sekcji:
+  & .card:nth-of-type(1) {
+    margin-top: -84px;
+  }
+}
+
+// Powtarzalne style tekstu w karcie:
+
+%text-settings {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.83;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+
+//  KARTA I JEJ WNĘTRZE
+.card {
+  padding: 43px 20px 43px 20px;
+  background: $mainWhiteColor;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  width: 220px;
+  height: 427px;
+
+  // kategoria karty (cafe/foodtruck)
+
+  &__category {
+    @extend %text-settings;
+    color: $mainWhiteColor;
+    background-color: $mainBrownBgColor;
+    border-radius: 4px;
+    width: 80px;
+    text-align: center;
+  }
+
+  &__category--green {
+    background-color: $mainGreenBgColor;
+    width: 130px;
+  }
+  // sekcje w kartach z podkreśleniem u dołu
+  &__section {
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
+  &__section--no-border {
+    border: none;
+  }
+  // nazwa miasta i opis
+  &__text-place {
+    @extend %text-settings;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $mainGreyColor;
+  }
+  // dni i godziny otwarcia
+  &__text-days {
+    @extend %text-settings;
+  }
+
+  &__text-hours {
+    @extend %text-settings;
+
+    color: $mainPinkColor;
+  }
+  // mail i telefon
+  &__link {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $mainGreyColor;
+    text-decoration: none;
+  }
+}
+// przyciski pod kartami
+.btn-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: $lightPinkBgColor;
+  padding-bottom: 113px;
+
+  &__item {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+    color: $darkPinkColor;
+    background: $mainWhiteColor;
+    border-radius: 22px;
+    border: none;
+    padding: 10px 17px;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  &__item:hover,
+  &__item:focus {
+    background-color: #ecebeb;
+  }
+
+  &__item--pink {
+    color: #ffffff;
+    background: $darkPinkColor;
+  }
+  &__item--pink:hover,
+  &__item--pink:focus {
+    background: #d41342;
+  }
+
+  &__icon {
+    fill: #ffffff;
+    margin-left: 8px;
+  }
+  &__icon--pink {
+    fill: $darkPinkColor;
+  }
+}
+
+// =========================================TABLET===============================
+@media screen and (min-width: 768px) {
+  .contacts-section {
+    padding-top: 50.4px;
+    margin-top: 119px;
+  }
+
+  // ======== SIATKA
+  .grid {
+    justify-content: center;
+    flex-direction: row;
+    padding-bottom: 78px;
+  }
+
+  //  KARTA I JEJ WNĘTRZE
+  .card {
+    padding: 50px 30px 50px 30px;
+    height: 544px;
+    margin-top: -84px;
+
+    // kategoria karty (cafe/foodtruck)
+    &__category {
+      width: 73px;
+      font-size: 16px;
+      line-height: 1.87;
+    }
+
+    &__category--green {
+      width: 138px;
+    }
+    // sekcje w kartach z podkreśleniem u dołu
+    &__section {
+      padding-bottom: 30px;
+      padding-top: 30px;
+    }
+    // nazwa miasta i opis, dni i godziny otwarcia, mail i telefon
+    &__text-place,
+    &__text,
+    &__text-days,
+    &__text-hours,
+    &__link {
+      font-size: 14px;
+      line-height: 1.85;
+    }
+  }
+  // przyciski pod kartami
+  .btn-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 14.5px;
+    padding-bottom: 158px;
+
+    &__item {
+      padding: 10px 35px;
+    }
+    &__icon {
+      fill: #ffffff;
+      margin-left: 8px;
+      width: 4.28px;
+    }
+    &__icon--pink {
+      fill: $darkPinkColor;
+    }
+  }
+}
+
+// =========================================DESKTOP================================
+@media screen and (min-width: 1200px) {
+  .contacts-section {
+    margin-top: 132px;
+    padding-top: 84.4px;
+  }
+  // ======== SIATKA
+  .grid {
+    padding-bottom: 86px;
+
+    // // Background- spots- tylko wersja desktopowa
+    background-image: url('./../images/contacts/spots.png');
+
+    @media screen and(min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('./../images/contacts/spots@2x.png');
+    }
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    & .card:nth-child(1) {
+      margin-top: -112px;
+    }
+  }
+
+  //  KARTA I JEJ WNĘTRZE
+  .card {
+    padding: 51px 44px 62px 43px;
+    width: 330px;
+    height: 572px;
+    margin-top: -112px;
+    // sekcje w kartach z podkreśleniem u dołu
+    &__section {
+      padding-bottom: 32px;
+      padding-top: 32px;
+    }
+    // nazwa miasta i opis, dni i godziny otwarcia, mail i telefon
+    &__text-place,
+    &__text,
+    &__text-days,
+    &__text-hours {
+      font-size: 16px;
+      line-height: 1.87;
+    }
+
+    &__link {
+      font-size: 16px;
+      line-height: 1.81;
+    }
+  }
+  // przyciski pod kartami
+  .btn-list {
+    padding-bottom: 165px;
+    gap: 14.5px;
+
+    &__item {
+      padding: 10px 36px;
+    }
+
+    &__icon {
+      fill: #ffffff;
+      margin-left: 8px;
+      width: 4.43px;
+    }
+    &__icon--pink {
+      fill: $darkPinkColor;
+    }
+  }
+}
+
+// =====================================MODAL...............
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.75);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 3;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 450px;
+  max-height: 609px;
+  background: #e17992;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background: #e17992;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    gap: 10px;
+  }
+  &__link {
+    text-align: center;
+    text-decoration: none;
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.83;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+  }
+  &__picture {
+    border-radius: 50px;
+    border: 2px solid #ffffff;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    min-width: 700px;
+
+    &__list {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      padding: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 1100px;
+
+    &__list {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      padding: 30px;
+    }
+    &__link {
+      font-size: 16px;
+      line-height: 1.85;
+    }
+    &__picture {
+      width: 300px;
+    }
+  }
+}
