@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body{
+  font-family:"Titan One", sans-serif;
+  font-family:"DM Sans", sans-serif;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+p{margin: 0;}
+
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 1200px;
