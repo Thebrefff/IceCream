@@ -130,7 +130,9 @@
   &__item--pink {
     color: $mainWhiteColor;
     background: $darkPinkColor;
+    fill: $darkPinkColor;
   }
+
   &__item--pink:hover,
   &__item--pink:focus {
     background: #d41342;
@@ -139,10 +141,12 @@
   &__icon {
     fill: $mainWhiteColor;
     margin-left: 8px;
+    scale: 1.8;
   }
-  &__icon--pink {
-    fill: $darkPinkColor;
-  }
+  // tu są ustawienia gdy domyślnie ikona będzie biała
+  // &__icon--pink {
+  //   fill: $darkPinkColor;
+  // }
 }
 
 // =========================================TABLET===============================
