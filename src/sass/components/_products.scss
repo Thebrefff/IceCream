@@ -1,0 +1,188 @@
+// ====================================MOBILE====================================
+.products-section {
+  margin-top: 121px;
+
+  &__subtitle {
+    width: 142px;
+    height: 21px;
+    @extend %card-products-title-settings;
+    font-size: 18px;
+    line-height: 1.17;
+    color: $mainPinkColor;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    width: 200px;
+    height: 36px;
+    @extend %card-products-title-settings;
+    font-size: 34px;
+    line-height: 1.15;
+    color: $darkPinkColor;
+    letter-spacing: 0.04em;
+    margin-bottom: 144px;
+  }
+}
+
+// ======== SIATKA
+.grid-products {
+  background-color: $mainWhiteColor;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 17px;
+  padding-bottom: 98px;
+}
+
+// Powtarzalne style tekstu w karcie:
+%card-products-text-settings {
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $mainWhiteColor;
+  margin: 0 auto;
+}
+%card-products-title-settings {
+  font-family: 'Titan One';
+  font-weight: 400;
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+//  KARTA I JEJ WNĘTRZE
+.card-products {
+  border-radius: 24px;
+  width: 280px;
+  height: 485px;
+
+  &--icecream {
+    background: $mainPinkBgColor;
+  }
+
+  &--icecoffee {
+    background: $mainBrownBgColor;
+  }
+
+  &--milkshakes {
+    background: $mainGreenBgColor;
+  }
+
+  // kategoria karty (ice cream/ice coffee/milkshakes)
+  &__title {
+    @extend %card-products-text-settings;
+    font-family: 'Titan One';
+    text-transform: uppercase;
+    width: 174px;
+    height: 23px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.15;
+    margin-top: 161px;
+  }
+
+  &__text {
+    @extend %card-products-text-settings;
+    width: 200px;
+    height: 124px;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 152%;
+  }
+  &__svg {
+    height: 6px;
+  }
+  &__dots {
+    margin: 30px auto;
+    align-items: center;
+  }
+}
+
+// =========================================TABLET===============================
+@media screen and (min-width: $tablet) {
+  .products-section {
+    margin-top: 122px;
+
+    &__subtitle {
+      width: 205px;
+      height: 30px;
+      font-size: 26px;
+      line-height: 1.15;
+    }
+
+    &__title {
+      width: 283px;
+      height: 55px;
+      font-size: 48px;
+      line-height: 1.15;
+    }
+  }
+
+  // ======== SIATKA
+  .grid-products {
+    justify-content: center;
+    flex-direction: row;
+    padding: 0 34px;
+  }
+
+  //  KARTA I JEJ WNĘTRZE
+  .card-products {
+    width: 220px;
+    height: 485px;
+
+    // kategoria karty (ice cream/ice coffee/milkshakes)
+    &__title {
+      width: 199px;
+    }
+
+    &__text {
+      width: 198px;
+      line-height: 176%;
+    }
+  }
+}
+// =========================================DESKTOP================================
+@media screen and (min-width: $laptop) {
+  .products-section {
+    margin-top: 127px;
+
+    &__subtitle {
+      width: 249px;
+      height: 34px;
+      font-size: 30px;
+      line-height: 1.13;
+    }
+
+    &__title {
+      width: 350px;
+      height: 66px;
+      font-size: 58px;
+      line-height: 1.14;
+    }
+  }
+
+  // ======== SIATKA
+  .grid-products {
+    padding: 0 112px;
+  }
+
+  //  KARTA I JEJ WNĘTRZE
+  .card-products {
+    width: 329px;
+    height: 525px;
+
+    // kategoria karty (ice cream/ice coffee/milkshakes)
+    &__title {
+      width: 209px;
+      height: 34px;
+      font-size: 30px;
+      line-height: 1.13;
+    }
+
+    &__text {
+      width: 241px;
+      height: 106px;
+      font-size: 16px;
+    }
+  }
+}
