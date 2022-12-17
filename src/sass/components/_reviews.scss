@@ -18,7 +18,7 @@
   &__description::before {
     // display: block;
     content: '';
-    background-image: url(../images/reviews/quotes.png);
+    background-image: url("./../images/reviews/quotes.png");
     width: 54px;
     height: 40px;
     position: absolute;
