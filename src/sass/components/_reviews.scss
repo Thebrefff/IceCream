@@ -1,4 +1,9 @@
 .reviews {
+  padding-top: 80px;
+  @media (min-width:768px) {padding-top: 121px;}
+  @media (min-width:1200px) {padding-top: 123px;}
+
+
   margin-inline: 20px;
   display: flex;
   flex-direction: column;
@@ -67,8 +72,7 @@
       width: calc(100% - 64px);}
 
     @media (min-width: 1200px) {font-size: 16px; 
-      line-height: 1.87;
-      width: calc(100% - 64px);}  
+      line-height: 1.87;}  
 
   }
 
@@ -103,7 +107,7 @@
   &__photo {
     width: 85px;
     height: 85px;
-    margin-top: 80px;
+    // margin-top: 80px;
     margin-bottom: 29px;
   }
 
