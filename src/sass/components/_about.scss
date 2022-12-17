@@ -6,6 +6,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url('../images/about/milk_splash.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0px 89%;
 }
 
 .about__header {
@@ -47,7 +51,6 @@
 
 .about-description__wrapper {
   width: 68.75%;
-  background-image: url('./images/about/milk_splash.png');
 }
 
 .about__cow-description {
@@ -61,6 +64,16 @@
 }
 
 .about__cow-description_2 {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.59;
+  color: $mainGreyColor;
+  margin: 0 0 38px 0;
+}
+
+.about__cow-description_3 {
   font-family: $mainFont;
   font-style: normal;
   font-weight: 500;
@@ -86,10 +99,87 @@
   font-size: 14px;
   line-height: 1.29;
   color: $darkPinkColor;
-  margin: 0 0 0 0;
+  margin: 0 14px 0 0;
 }
 
 .about__button-icon {
   fill: $mainWhiteColor;
   scale: 1.8;
+}
+
+@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2ddpx) {
+  .about__wrapper {
+    background-image: url('../images/about/milk_splash-x2.png');
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about__wrapper {
+    background-image: none;
+    display: grid;
+    grid-template-columns: repeat(12, 40px);
+    column-gap: 20px;
+    justify-content: center;
+  }
+
+  .about__header {
+    width: 55.99%;
+    margin: 130px 0 50px 0;
+    grid-column-start: 3;
+    grid-column-end: 10;
+  }
+
+  .about__title {
+    font-size: 26px;
+    line-height: 1.154;
+    margin-bottom: 16px;
+  }
+
+  .about__heading {
+    font-size: 48px;
+    line-height: 1.146;
+    text-align: center;
+  }
+
+  .about__image {
+    width: 44.28%;
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+
+  .about-description__wrapper {
+    width: 44.28%;
+    grid-column-start: 7;
+    grid-column-end: 12;
+  }
+
+  .about__cow-description {
+    font-size: 14px;
+    line-height: 1.79;
+    margin: 0 0 28px 0;
+  }
+
+  .about__cow-description_2 {
+    font-size: 14px;
+    line-height: 1.79;
+    margin: 0 0 25px 0;
+    letter-spacing: 0.04em;
+  }
+
+  .about__cow-description_3 {
+    font-size: 14px;
+    line-height: 1.79;
+    margin: 0 0 62px 0;
+    letter-spacing: 0.04em;
+  }
+
+  .about__button {
+    padding: 11.5px 37.5px 11.5px 37.5px;
+  }
+
+  .button__text {
+    font-size: 16px;
+    line-height: 1.313;
+  }
 }
