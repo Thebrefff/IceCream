@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: center;
 
+  @media (min-width:768px) {margin-inline:74px;}
+  @media (min-width:1200px) {margin-inline:177px;}
+
   &__description {
     background-color: #fafafa;
     position: relative;
@@ -28,6 +31,9 @@
     display: flex;
     width: calc(100% - 100px);
 
+    @media (min-width:768px) {width: calc(100% - 120px);}
+    @media (min-width:1200px) {width: calc(100% - 113px);}
+
     margin: 0 auto;
     background-image: repeating-linear-gradient(
       to bottom,
@@ -38,10 +44,14 @@
     );
     background-repeat: no-repeat;
     background-position-y: 40px;
+
+    
   }
 
   &__text {
     width: calc(100% - 23px);
+
+    
     margin: 0 auto;
     font-family: $mainFont;
     font-size: 12px;
@@ -51,7 +61,18 @@
     text-align: center;
     margin-top: 43px;
     z-index: 10;
+
+    @media (min-width: 768px) {font-size: 14px; 
+      line-height: 2.14;
+      width: calc(100% - 64px);}
+
+    @media (min-width: 1200px) {font-size: 16px; 
+      line-height: 1.87;
+      width: calc(100% - 64px);}  
+
   }
+
+    
 
   &__client {
     font-size: 14px;
