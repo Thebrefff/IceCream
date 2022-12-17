@@ -1,0 +1,166 @@
+.footer {
+  background-color: $lightPinkBgColor;
+  width: 100%;
+  height: auto;
+  &__column {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      margin-bottom: 91px;
+      justify-content: space-between;
+    }
+  }
+  &__motto {
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 43px;
+    width: 234px;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $tablet) {
+      margin-left: 36px;
+      width: 340px;
+    }
+    @media screen and (min-width: $laptop) {
+      margin-left: 114px;
+      width: 472px;
+    }
+
+    &--text1 {
+      font-family: $secondaryFont;
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $mainPinkColor;
+      margin-bottom: 17px;
+      @media screen and (min-width: $tablet) {
+        font-family: $secondaryFont;
+        font-size: 26px;
+        line-height: 1.1;
+        margin-bottom: 16px;
+      }
+      @media screen and (min-width: $laptop) {
+        font-family: $secondaryFont;
+        font-size: 30px;
+        line-height: 1.1;
+        margin-bottom: 15px;
+      }
+    }
+    &--text2 {
+      font-family: $secondaryFont;
+      font-size: 34px;
+      line-height: 1.1;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $darkPinkColor;
+      @media screen and (min-width: $tablet) {
+        font-size: 48px;
+        line-height: 1.1;
+      }
+      @media screen and (min-width: $laptop) {
+        font-size: 59px;
+        line-height: 1.1;
+      }
+    }
+  }
+
+  &__comunication {
+    margin-right: 21px;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      margin-right: 36px;
+    }
+    @media screen and (min-width: $laptop) {
+      margin-right: 121px;
+    }
+  }
+
+  &__social-media {
+    display: flex;
+    gap: 28px;
+    justify-content: flex-end;
+    margin-bottom: 46px;
+    width: 100%;
+
+    &--icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: rgba(254, 165, 187, 1);
+      display: flex;
+      justify-content: center;
+
+      &:hover {
+        background-color: $darkPinkColor;
+        border-radius: 50%;
+      }
+    }
+    &--Git {
+      width: 20px;
+      height: 34px;
+      fill: $mainWhiteColor;
+    }
+    &--telegram {
+      width: 22px;
+      height: 34px;
+      fill: $mainWhiteColor;
+    }
+    &--facebook {
+      width: 10px;
+      height: 34px;
+      fill: $mainWhiteColor;
+    }
+  }
+  &__contact {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+    margin-bottom: 43px;
+    width: 100%;
+
+    &--text {
+      font-family: $mainFont;
+      font-size: 12px;
+      line-height: 1.8;
+      font-weight: 700;
+      color: rgba(0, 0, 0, 1);
+      @media screen and (min-width: $tablet) {
+        font-size: 14px;
+      }
+      @media screen and (min-width: $laptop) {
+        font-size: 16px;
+      }
+    }
+
+    &--tel {
+      font-family: $mainFont;
+      font-size: 12px;
+      line-height: 1.8;
+      font-weight: 500;
+      text-decoration: none;
+      color: rgba(212, 20, 67, 1);
+      @media screen and (min-width: $tablet) {
+        font-size: 14px;
+      }
+      @media screen and (min-width: $laptop) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__right {
+    border-top: solid #e1e1e1 1px;
+    width: 100%;
+
+    &--text {
+      font-family: $mainFont;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.5;
+      color: rgba(144, 126, 130, 1);
+      text-align: center;
+      padding: 22px 91px 25px 80px;
+    }
+  }
+}
