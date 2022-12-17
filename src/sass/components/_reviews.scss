@@ -43,7 +43,7 @@
   &__text {
     width: calc(100% - 23px);
     margin: 0 auto;
-    font-family: 'DM Sans';
+    font-family: $mainFont;
     font-size: 12px;
     font-weight: 500;
     line-height: 2.55;
@@ -71,10 +71,10 @@
     top: -18px;
     left: 42px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
       top: -13px;
     }
-    @media (min-width: 1200px) {
+    @media (min-width: $laptop) {
       top: -15px;
     }
   }
@@ -101,6 +101,4 @@
   &__svg:first-child {
     fill: #d31342;
   }
-
-  
 }
