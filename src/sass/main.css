@@ -3,40 +3,27 @@
  * Główny plik dla stylów.
  * Wszystkie partials podłączamy tutaj.
  */
-:root {
-  --main-pink-bg-color: #ffb8ca;
-  --light-pink-bg-color: #fff5f6;
-  --dark-pink-bg-color: #e17992;
-  --main-green-bg-color: #c2e297;
-  --main-brown-bg-color: #f0d1a5;
-  --main-white-color: #ffffff;
-  --main-black-color: #000000;
-  --main-grey-color: #907e82;
-  --dark-pink-color: #d41443;
-  --main-pink-color: #ffa5ba;
-  --main-font: "DM Sans", sans-serif;
-  --secondary-font: "Titan One", cursive;
-}
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Titan One", sans-serif;
-  font-family: "DM Sans", sans-serif;
-}
-
-ul {
-  list-style: none;
+h1,
+h2,
+h4,
+h5,
+p,
+ul,
+address,
+fieldset,
+textarea,
+figure {
   margin: 0;
   padding: 0;
-}
-
-p {
-  margin: 0;
+  list-style: none;
+  font-style: normal;
+  resize: none;
 }
 
 .container {
@@ -58,21 +45,93 @@ p {
     width: 1200px;
   }
 }
-h1,
-h2,
-h4,
-h5,
-p,
-ul,
-address,
-fieldset,
-textarea,
-figure {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-style: normal;
-  resize: none;
+.reviews {
+  margin-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.reviews__description {
+  background-color: #fafafa;
+  position: relative;
+  margin-bottom: 52px;
+  padding-bottom: 20px;
+}
+.reviews__description::before {
+  content: "";
+  background-image: url(../images/reviews/quotes.png);
+  width: 54px;
+  height: 40px;
+  position: absolute;
+  top: 28px;
+  left: 62px;
+  z-index: 0;
+}
+.reviews__background {
+  display: flex;
+  width: calc(100% - 100px);
+  margin: 0 auto;
+  background-image: repeating-linear-gradient(to bottom, #fafafa, #fafafa 29px, #e1e1e1 29px, #e1e1e1 30px);
+  background-repeat: no-repeat;
+  background-position-y: 40px;
+}
+.reviews__text {
+  width: calc(100% - 23px);
+  margin: 0 auto;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 2.55;
+  color: #000000;
+  text-align: center;
+  margin-top: 43px;
+  z-index: 10;
+}
+.reviews__client {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.85;
+  position: relative;
+}
+.reviews__client::before {
+  content: "";
+  background-image: url("../images/reviews/dots.svg");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 4px;
+  position: absolute;
+  top: -18px;
+  left: 42px;
+}
+@media (min-width: 768px) {
+  .reviews__client::before {
+    top: -13px;
+  }
+}
+@media (min-width: 1200px) {
+  .reviews__client::before {
+    top: -15px;
+  }
+}
+.reviews__photo {
+  width: 85px;
+  height: 85px;
+  margin-top: 80px;
+  margin-bottom: 29px;
+}
+.reviews__dots {
+  margin-top: 30px;
+  display: flex;
+  gap: 18px;
+}
+.reviews__svg {
+  width: 12px;
+  height: 12px;
+  fill: #d9d9d9;
+}
+.reviews__svg:first-child {
+  fill: #d31342;
 }
 
 .contacts-section {
@@ -171,6 +230,9 @@ figure {
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
 .btn-list__item:hover, .btn-list__item:focus {
   background-color: #ecebeb;
@@ -181,6 +243,13 @@ figure {
 }
 .btn-list__item--pink:hover, .btn-list__item--pink:focus {
   background: #d41342;
+}
+.btn-list__icon {
+  fill: #ffffff;
+  margin-left: 8px;
+}
+.btn-list__icon--pink {
+  fill: #d41443;
 }
 
 @media screen and (min-width: 768px) {
@@ -223,6 +292,14 @@ figure {
   .btn-list__item {
     padding: 10px 35px;
   }
+  .btn-list__icon {
+    fill: #ffffff;
+    margin-left: 8px;
+    width: 4.28px;
+  }
+  .btn-list__icon--pink {
+    fill: #d41443;
+  }
 }
 @media screen and (min-width: 1200px) {
   .contacts-section {
@@ -231,10 +308,22 @@ figure {
   }
   .grid {
     padding-bottom: 86px;
+    background-image: url("./../images/contacts/spots.png");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .grid {
+    background-image: url("./../images/contacts/spots@2x.png");
+  }
+}
+@media screen and (min-width: 1200px) {
   .grid .card:nth-child(1) {
     margin-top: -112px;
   }
+}
+@media screen and (min-width: 1200px) {
   .card {
     padding: 51px 44px 62px 43px;
     width: 330px;
@@ -253,12 +342,22 @@ figure {
     font-size: 16px;
     line-height: 1.81;
   }
+}
+@media screen and (min-width: 1200px) {
   .btn-list {
     padding-bottom: 165px;
     gap: 14.5px;
   }
   .btn-list__item {
     padding: 10px 36px;
+  }
+  .btn-list__icon {
+    fill: #ffffff;
+    margin-left: 8px;
+    width: 4.43px;
+  }
+  .btn-list__icon--pink {
+    fill: #d41443;
   }
 }
 .is-hidden {
@@ -316,7 +415,7 @@ figure {
 .modal__link {
   text-align: center;
   text-decoration: none;
-  font-family: "DM Sans";
+  font-family: "DM Sans", sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.83;
@@ -358,7 +457,7 @@ figure {
   }
 }
 .footer {
-  background-color: #FFF5F6;
+  background-color: #fff5f6;
   width: 100%;
   height: auto;
 }
@@ -390,17 +489,17 @@ figure {
   }
 }
 .footer__motto--text1 {
-  font-family: "Titan One";
+  font-family: "Titan One", cursive;
   font-size: 18px;
   line-height: 1.2;
   font-weight: 400;
   text-transform: uppercase;
-  color: #FFA5BA;
+  color: #ffa5ba;
   margin-bottom: 17px;
 }
 @media screen and (min-width: 768px) {
   .footer__motto--text1 {
-    font-family: "Titan One";
+    font-family: "Titan One", cursive;
     font-size: 26px;
     line-height: 1.1;
     margin-bottom: 16px;
@@ -408,19 +507,19 @@ figure {
 }
 @media screen and (min-width: 1200px) {
   .footer__motto--text1 {
-    font-family: "Titan One";
+    font-family: "Titan One", cursive;
     font-size: 30px;
     line-height: 1.1;
     margin-bottom: 15px;
   }
 }
 .footer__motto--text2 {
-  font-family: "Titan One";
+  font-family: "Titan One", cursive;
   font-size: 34px;
   line-height: 1.1;
   font-weight: 400;
   text-transform: uppercase;
-  color: #D41443;
+  color: #d41443;
 }
 @media screen and (min-width: 768px) {
   .footer__motto--text2 {
@@ -433,6 +532,9 @@ figure {
     font-size: 59px;
     line-height: 1.1;
   }
+}
+.footer__comunication {
+  margin-right: 21px;
 }
 @media screen and (min-width: 768px) {
   .footer__comunication {
@@ -462,20 +564,23 @@ figure {
   justify-content: center;
 }
 .footer__social-media--icon:hover {
-  background-color: #D41443;
+  background-color: #d41443;
   border-radius: 50%;
 }
 .footer__social-media--Git {
   width: 20px;
   height: 34px;
+  fill: #ffffff;
 }
 .footer__social-media--telegram {
   width: 22px;
   height: 34px;
+  fill: #ffffff;
 }
 .footer__social-media--facebook {
   width: 10px;
   height: 34px;
+  fill: #ffffff;
 }
 .footer__contact {
   display: flex;
@@ -485,7 +590,7 @@ figure {
   width: 100%;
 }
 .footer__contact--text {
-  font-family: "DM Sans";
+  font-family: "DM Sans", sans-serif;
   font-size: 12px;
   line-height: 1.8;
   font-weight: 700;
@@ -502,7 +607,7 @@ figure {
   }
 }
 .footer__contact--tel {
-  font-family: "DM Sans";
+  font-family: "DM Sans", sans-serif;
   font-size: 12px;
   line-height: 1.8;
   font-weight: 500;
@@ -520,11 +625,11 @@ figure {
   }
 }
 .footer__right {
-  border-top: solid #E1E1E1 1px;
+  border-top: solid #e1e1e1 1px;
   width: 100%;
 }
 .footer__right--text {
-  font-family: "DM Sans";
+  font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.5;
