@@ -113,7 +113,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $tablet) {
   .about__wrapper {
     background-image: none;
     flex-direction: row;
@@ -184,7 +184,7 @@
   }
 }
 
-@media screen and(min-width:1280px) {
+@media screen and(min-width: $laptop) {
   .about__wrapper {
     background-image: url('../images/about/milk_splash.png');
     background-position: 0px 100%;
