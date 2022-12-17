@@ -92,6 +92,11 @@
   margin: 0 0 39px 0;
 }
 
+.about__button:hover,
+.about__button:focus {
+  background-color: #ecebeb;
+}
+
 .button__text {
   font-family: $mainFont;
   font-style: normal;
