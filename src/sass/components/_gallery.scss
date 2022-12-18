@@ -1,4 +1,5 @@
 .gallery {
+<<<<<<< Updated upstream
   margin: 0;
   height: 122px;
   background-image: linear-gradient(to bottom, $lightPinkBgColor 39%, $mainWhiteColor 61%);
@@ -23,5 +24,31 @@
     height: 430px;
     background-image: linear-gradient(to bottom, $lightPinkBgColor 39%, $mainWhiteColor 61%);
     //   url('.././images/gallery/gallery.jpg');
+=======
+  background-image: linear-gradient(to bottom, --main-pink-bg-color 40%, --main-white-bg-color 60%);
+  width: 364px;
+  height: 122px;
+}
+@media screen and (min-width: 768px) {
+  .gallery {
+    background-image: linear-gradient(
+      to bottom,
+      --main-pink-bg-color 40%,
+      --main-white-bg-color 60%
+    );
+    width: 786px;
+    height: 264px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery {
+    background-image: linear-gradient(
+      to bottom,
+      --main-pink-bg-color 60%,
+      --main-white-bg-color 40%
+    );
+    width: 1280px;
+    height: 430px;
+>>>>>>> Stashed changes
   }
 }
