@@ -1,0 +1,156 @@
+.advantages {
+  background-color: $lightPinkBgColor;
+  padding-bottom: 145px;
+
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 246px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    padding-bottom: 310px;
+  }
+
+  &__name {
+    display: none;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+      gap: 60px;
+    }
+
+    @media screen and (min-width: $laptop) {
+      gap: 30px;
+    }
+  }
+
+  &__element {
+    max-width: 230px;
+    width: 100%;
+
+    @media screen and (max-width: $tablet) {
+      &:not(:last-child) {
+        margin-bottom: 38px;
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      max-width: 180px;
+    }
+
+    @media screen and (min-width: $laptop) {
+      max-width: 330px;
+    }
+  }
+
+  &__element--first {
+    &::before {
+      content: '';
+      display: block;
+      width: 33px;
+      height: 50px;
+      background-image: url('../images/advantages/advantage1-icon.png');
+      margin-bottom: 16px;
+
+      @media screen and (min-width: $tablet) {
+        margin-bottom: 36px;
+      }
+
+      @media screen and (min-width: $laptop) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__element--second {
+    &::before {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 50px;
+      background-image: url('../images/advantages/advantage2-icon.png');
+      margin-bottom: 16px;
+
+      @media screen and (min-width: $tablet) {
+        margin-bottom: 36px;
+      }
+
+      @media screen and (min-width: $laptop) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__element--third {
+    &::before {
+      content: '';
+      display: block;
+      width: 44px;
+      height: 50px;
+      background-image: url('../images/advantages/advantage3-icon.png');
+      margin-bottom: 16px;
+
+      @media screen and (min-width: $tablet) {
+        margin-bottom: 36px;
+      }
+
+      @media screen and (min-width: $laptop) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $secondaryFont;
+    font-size: 36px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0;
+    color: $darkPinkColor;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 48px;
+      line-height: 1.14;
+      text-transform: none;
+    }
+
+    @media screen and (min-width: $laptop) {
+      font-size: 58px;
+      line-height: 1.38;
+    }
+  }
+
+  &__text {
+    font-family: $mainFont;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.7;
+    color: $mainBlackColor;
+    margin: 0;
+    margin-top: 13px;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 14px;
+      line-height: 1.74;
+      width: 180px;
+    }
+
+    @media screen and (min-width: $laptop) {
+      font-size: 16px;
+      line-height: 1.76;
+      letter-spacing: 0.02em;
+      width: 330px;
+      margin-top: 15px;
+    }
+  }
+}
