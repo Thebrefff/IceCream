@@ -112,7 +112,7 @@
   margin: 0 14px 0 0;
 }
 
-@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2ddpx) {
+@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .about {
     &__wrapper {
       background-image: url('../images/about/milk_splash-x2.png');
