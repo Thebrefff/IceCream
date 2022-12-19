@@ -1,100 +1,105 @@
 .about {
   background-color: $lightPinkBgColor;
-}
 
-.about__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image: url('../images/about/milk_splash.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 0px 89%;
-}
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../images/about/milk_splash.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0px 89%;
+  }
 
-.about__header {
-  width: 62.5%;
-  display: flex;
-  flex-direction: column;
-  margin: 125px 0 26px 0;
-}
+  &__header {
+    width: 62.5%;
+    display: flex;
+    flex-direction: column;
+    margin: 125px 0 26px 0;
+  }
 
-.about__title {
-  font-family: $secondaryFont;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.167;
-  text-align: center;
-  text-transform: uppercase;
-  color: $mainPinkColor;
-  margin-bottom: 15px;
-}
+  &__title {
+    font-family: $secondaryFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.167;
+    text-align: center;
+    text-transform: uppercase;
+    color: $mainPinkColor;
+    margin-bottom: 15px;
+  }
 
-.about__heading {
-  font-family: $secondaryFont;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 34px;
-  line-height: 1.148;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: $darkPinkColor;
-  margin: 0;
-}
+  &__heading {
+    font-family: $secondaryFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.148;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: $darkPinkColor;
+    margin: 0;
+  }
 
-.about__image {
-  width: 87.5%;
-  margin: 0 0 46px 0;
+  &__image {
+    width: 87.5%;
+    margin: 0 0 46px 0;
+  }
+
+  &__cow-description {
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.59;
+    color: $mainBlackColor;
+    margin: 0 0 32px 0;
+  }
+
+  &__cow-description_2 {
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.59;
+    color: $mainGreyColor;
+    margin: 0 0 38px 0;
+  }
+
+  &__cow-description_3 {
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.59;
+    color: $mainGreyColor;
+    margin: 0 0 17px 0;
+  }
+
+  &__button {
+    background-color: $mainWhiteColor;
+    border-radius: 22px;
+    border: none;
+    padding: 13px 37.5px 13px 37.5px;
+    cursor: pointer;
+    margin: 0 0 39px 0;
+  }
+
+  &__button:hover,
+  &__button:focus {
+    background-color: #ecebeb;
+  }
+
+  &__button-icon {
+    fill: $mainWhiteColor;
+    scale: 1.8;
+  }
 }
 
 .about-description__wrapper {
   width: 68.75%;
-}
-
-.about__cow-description {
-  font-family: $mainFont;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.59;
-  color: $mainBlackColor;
-  margin: 0 0 32px 0;
-}
-
-.about__cow-description_2 {
-  font-family: $mainFont;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.59;
-  color: $mainGreyColor;
-  margin: 0 0 38px 0;
-}
-
-.about__cow-description_3 {
-  font-family: $mainFont;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.59;
-  color: $mainGreyColor;
-  margin: 0 0 17px 0;
-}
-
-.about__button {
-  background-color: $mainWhiteColor;
-  border-radius: 22px;
-  border: none;
-  padding: 13px 37.5px 13px 37.5px;
-  cursor: pointer;
-  margin: 0 0 39px 0;
-}
-
-.about__button:hover,
-.about__button:focus {
-  background-color: #ecebeb;
 }
 
 .button__text {
@@ -107,80 +112,79 @@
   margin: 0 14px 0 0;
 }
 
-.about__button-icon {
-  fill: $mainWhiteColor;
-  scale: 1.8;
-}
-
 @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2ddpx) {
-  .about__wrapper {
-    background-image: url('../images/about/milk_splash-x2.png');
+  .about {
+    &__wrapper {
+      background-image: url('../images/about/milk_splash-x2.png');
+    }
   }
 }
 
 @media screen and (min-width: $tablet) {
-  .about__wrapper {
-    background-image: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-  }
+  .about {
+    &__wrapper {
+      background-image: none;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+    }
 
-  .about__header {
-    width: 55.99%;
-    margin: 130px 0 50px 0;
-  }
+    &__header {
+      width: 55.99%;
+      margin: 130px 0 50px 0;
+    }
 
-  .about__title {
-    font-size: 26px;
-    line-height: 1.154;
-    margin-bottom: 16px;
-  }
+    &__title {
+      font-size: 26px;
+      line-height: 1.154;
+      margin-bottom: 16px;
+    }
 
-  .about__heading {
-    font-size: 48px;
-    line-height: 1.146;
-    width: 100.04%;
-  }
+    &__heading {
+      font-size: 48px;
+      line-height: 1.146;
+      width: 100.04%;
+    }
 
-  .about__image {
-    width: 44.28%;
-    margin: 0 17px 0 0;
-    padding: 0;
+    &__image {
+      width: 44.28%;
+      margin: 0 17px 0 0;
+      padding: 0;
+    }
+
+    &__cow-description {
+      font-size: 14px;
+      line-height: 1.79;
+      margin: 0 0 0 0;
+      padding-bottom: 28px;
+    }
+
+    &__cow-description_2 {
+      font-size: 14px;
+      line-height: 1.79;
+      margin: 0;
+      padding-bottom: 14px;
+      letter-spacing: 0.04em;
+    }
+
+    &__cow-description_3 {
+      font-size: 14px;
+      line-height: 1.79;
+      margin: 0;
+      padding-bottom: 62px;
+      letter-spacing: 0.04em;
+    }
+
+    &__button {
+      padding: 11.5px 37.5px 11.5px 37.5px;
+      margin: 0 0 66px 0;
+    }
   }
 
   .about-description__wrapper {
     width: 44.28%;
     margin: 50px 0 0 0;
-  }
-
-  .about__cow-description {
-    font-size: 14px;
-    line-height: 1.79;
-    margin: 0 0 0 0;
-    padding-bottom: 28px;
-  }
-
-  .about__cow-description_2 {
-    font-size: 14px;
-    line-height: 1.79;
-    margin: 0;
-    padding-bottom: 14px;
-    letter-spacing: 0.04em;
-  }
-
-  .about__cow-description_3 {
-    font-size: 14px;
-    line-height: 1.79;
-    margin: 0;
-    padding-bottom: 62px;
-    letter-spacing: 0.04em;
-  }
-
-  .about__button {
-    padding: 11.5px 37.5px 11.5px 37.5px;
-    margin: 0 0 66px 0;
   }
 
   .button__text {
@@ -190,51 +194,52 @@
 }
 
 @media screen and(min-width: $laptop) {
-  .about__wrapper {
-    background-image: url('../images/about/milk_splash.png');
-    background-position: 0px 100%;
-  }
-  .about__header {
-    width: 41.719%;
-    margin: 125px 150px 55px 150px;
-  }
+  .about {
+    &__wrapper {
+      background-image: url('../images/about/milk_splash.png');
+      background-position: 0px 100%;
+    }
+    &__header {
+      width: 41.719%;
+      margin: 125px 150px 55px 150px;
+    }
 
-  .about__title {
-    font-size: 30px;
-    line-height: 1.134;
-    margin-bottom: 15px;
-  }
+    &__title {
+      font-size: 30px;
+      line-height: 1.134;
+      margin-bottom: 15px;
+    }
 
-  .about__heading {
-    font-size: 58px;
-    line-height: 1.138;
-  }
+    &__heading {
+      font-size: 58px;
+      line-height: 1.138;
+    }
 
-  .about__image {
-    width: 40.313%;
-    margin: 0 74px 0 0;
-  }
+    &__image {
+      width: 40.313%;
+      margin: 0 74px 0 0;
+    }
 
+    &__cow-description {
+      font-size: 16px;
+      line-height: 1.75;
+      padding-bottom: 35px;
+    }
+    &__cow-description_2 {
+      line-height: 1.93;
+      padding-bottom: 27px;
+    }
+    &__cow-description_3 {
+      line-height: 1.93;
+      padding-bottom: 45px;
+    }
+
+    &__button {
+      margin: 0 0 172px 0;
+    }
+  }
   .about-description__wrapper {
     width: 36.173%;
     margin: 51px 0 0 0;
-  }
-
-  .about__cow-description {
-    font-size: 16px;
-    line-height: 1.75;
-    padding-bottom: 35px;
-  }
-  .about__cow-description_2 {
-    line-height: 1.93;
-    padding-bottom: 27px;
-  }
-  .about__cow-description_3 {
-    line-height: 1.93;
-    padding-bottom: 45px;
-  }
-
-  .about__button {
-    margin: 0 0 172px 0;
   }
 }
