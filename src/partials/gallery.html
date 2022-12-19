@@ -1,12 +1,7 @@
 <section class="gallery container">
   <picture>
-    <img
-      src="./images/gallery/gallery.png"
-      srcset="./images/gallery/gallery@2x.png 2x"
-      alt="computer"
-      class="gallery__img"
-      width="364"
-      height="122"
-    />
+    <source srcset="./images/gallery/gallery.png 1x" media="(max-width: $tablet)" />
+    <source srcset="./images/gallery/gallery@2x.png 2x" media="(min-width: $tablet)" />
+    <img src="./images/gallery/gallery.png" alt="gallery" class="gallery__img" />
   </picture>
 </section>

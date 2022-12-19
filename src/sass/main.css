@@ -358,26 +358,22 @@ figure {
     width: 300px;
   }
 }
-.gallery {
-  display: flex;
-  justify-content: center;
-}
 .gallery__img {
   margin-top: -48px;
-  width: 364px;
-  height: 122px;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 768px) {
-  .gallery {
-    min-width: 786px;
-    height: 264px;
+  .gallery__img {
+    margin-top: -106px;
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
-  .gallery {
-    width: 1600px;
-    height: 430px;
+  .gallery__img {
+    width: 1280px;
+    margin-top: -171px;
   }
 }
 .footer {
