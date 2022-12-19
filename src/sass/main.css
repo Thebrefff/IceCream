@@ -9,6 +9,7 @@
   --dark-pink-bg-color: #e17992;
   --main-green-bg-color: #c2e297;
   --main-brown-bg-color: #f0d1a5;
+  --main-white-bg-color: #E5E5E5;
   --main-white-color: #ffffff;
   --main-black-color: #000000;
   --main-grey-color: #907e82;
@@ -355,6 +356,28 @@ figure {
   }
   .modal__picture {
     width: 300px;
+  }
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+}
+.gallery__img {
+  margin-top: -48px;
+  width: 364px;
+  height: 122px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery {
+    min-width: 786px;
+    height: 264px;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .gallery {
+    width: 1600px;
+    height: 430px;
   }
 }
 .footer {

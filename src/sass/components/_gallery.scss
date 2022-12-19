@@ -1,54 +1,23 @@
 .gallery {
-<<<<<<< Updated upstream
-  margin: 0;
-  height: 122px;
-  background-image: linear-gradient(to bottom, $lightPinkBgColor 39%, $mainWhiteColor 61%);
-
   display: flex;
   justify-content: center;
-}
-@media screen and (min-width: 768px) {
-  .gallery {
-    width: 1600px;
-    margin: 0;
-    height: 264px;
-    background-image: linear-gradient(to bottom, $lightPinkBgColor 40%, $mainWhiteColor 60%);
+  &__img {
+    margin-top: -48px;
+    width: 364px;
+    height: 122px;
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
-  screen and (min-resolution: 192dpi) and (min-width: 1200px),
-  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+@media screen and (min-width: $tablet) {
   .gallery {
-    margin: 0;
-    width: 1600px;
-    height: 430px;
-    background-image: linear-gradient(to bottom, $lightPinkBgColor 39%, $mainWhiteColor 61%);
-    //   url('.././images/gallery/gallery.jpg');
-=======
-  background-image: linear-gradient(to bottom, --main-pink-bg-color 40%, --main-white-bg-color 60%);
-  width: 364px;
-  height: 122px;
-}
-@media screen and (min-width: 768px) {
-  .gallery {
-    background-image: linear-gradient(
-      to bottom,
-      --main-pink-bg-color 40%,
-      --main-white-bg-color 60%
-    );
-    width: 786px;
+    min-width: 786px;
     height: 264px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: $laptop),
+  screen and (min-resolution: 192dpi) and (min-width: $laptop),
+  screen and (min-resolution: 2dppx) and (min-width: $laptop) {
   .gallery {
-    background-image: linear-gradient(
-      to bottom,
-      --main-pink-bg-color 60%,
-      --main-white-bg-color 40%
-    );
-    width: 1280px;
+    width: 1600px;
     height: 430px;
->>>>>>> Stashed changes
   }
 }
