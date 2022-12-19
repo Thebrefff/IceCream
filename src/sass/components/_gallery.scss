@@ -1,0 +1,22 @@
+.gallery {
+  &__img {
+    margin-top: -48px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media screen and (min-width: $tablet) {
+  .gallery__img {
+    margin-top: -106px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: $laptop),
+  screen and (min-resolution: 192dpi) and (min-width: $laptop),
+  screen and (min-resolution: 2dppx) and (min-width: $laptop) {
+  .gallery__img {
+    width: 1280px;
+    margin-top: -171px;
+  }
+}
