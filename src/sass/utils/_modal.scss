@@ -1,0 +1,102 @@
+// =====================================MODAL/sekcja CONTACTS...............
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.75);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 3;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 450px;
+  max-height: 609px;
+  background: $darkPinkBgColor;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background: $darkPinkBgColor;
+    color: $mainWhiteColor;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    gap: 10px;
+  }
+  &__link {
+    text-align: center;
+    text-decoration: none;
+    font-family: $mainFont;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.83;
+    letter-spacing: 0.04em;
+    color: $mainWhiteColor;
+  }
+  &__picture {
+    border-radius: 50px;
+    border: 2px solid $mainWhiteColor;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .modal {
+    min-width: 700px;
+
+    &__list {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      padding: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .modal {
+    min-width: 1100px;
+
+    &__list {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      padding: 30px;
+    }
+    &__link {
+      font-size: 16px;
+      line-height: 1.85;
+    }
+    &__picture {
+      width: 300px;
+    }
+  }
+}
