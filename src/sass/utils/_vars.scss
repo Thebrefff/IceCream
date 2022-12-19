@@ -1,17 +1,24 @@
-:root {
-  --main-pink-bg-color: #ffb8ca;
-  --light-pink-bg-color: #fff5f6;
-  --dark-pink-bg-color: #e17992;
-  --main-green-bg-color: #c2e297;
-  --main-brown-bg-color: #f0d1a5;
-  --main-white-bg-color: #E5E5E5;
-  --main-white-color: #ffffff;
-  --main-black-color: #000000;
-  --main-grey-color: #907e82;
-  --dark-pink-color: #d41443;
-  --main-pink-color: #ffa5ba;
-  --main-font: 'DM Sans', sans-serif;
-  --secondary-font: 'Titan One', cursive;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h4,
+h5,
+p,
+ul,
+address,
+fieldset,
+textarea,
+figure {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-style: normal;
+  resize: none;
 }
 
 $mainPinkBgColor: #ffb8ca;
@@ -26,3 +33,6 @@ $darkPinkColor: #d41443;
 $mainPinkColor: #ffa5ba;
 $mainFont: 'DM Sans', sans-serif;
 $secondaryFont: 'Titan One', cursive;
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 1200px;

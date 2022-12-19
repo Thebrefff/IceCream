@@ -5,8 +5,13 @@
 
 // Style dla pliku z przykładem HTML fragmentu
 @import './utils/vars';
-@import './utils/variables';
+@import './utils/modal';
 @import './components/container';
+
+@import './components/products';
+@import './components/about';
+@import './components/advantages';
+@import './components/reviews';
 @import './components/contacts';
 @import './components/gallery';
 @import './components/footer';

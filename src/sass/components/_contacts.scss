@@ -1,21 +1,3 @@
-// moje globalne resety
-h1,
-h2,
-h4,
-h5,
-p,
-ul,
-address,
-fieldset,
-textarea,
-figure {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-style: normal;
-  resize: none;
-}
-
 // ====================================MOBILE====================================
 .contacts-section {
   padding-top: 56.4px;
@@ -47,7 +29,7 @@ figure {
   font-size: 12px;
   line-height: 1.83;
   letter-spacing: 0.04em;
-  color: #000000;
+  color: $mainBlackColor;
 }
 
 //  KARTA I JEJ WNĘTRZE
@@ -136,6 +118,9 @@ figure {
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
   }
   &__item:hover,
   &__item:focus {
@@ -143,17 +128,25 @@ figure {
   }
 
   &__item--pink {
-    color: #ffffff;
+    color: $mainWhiteColor;
     background: $darkPinkColor;
+    fill: $darkPinkColor;
   }
+
   &__item--pink:hover,
   &__item--pink:focus {
     background: #d41342;
   }
+
+  &__icon {
+    margin-left: 8px;
+    scale: 1.5;
+    width: 3.61px;
+  }
 }
 
 // =========================================TABLET===============================
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $tablet) {
   .contacts-section {
     padding-top: 50.4px;
     margin-top: 119px;
@@ -207,11 +200,15 @@ figure {
     &__item {
       padding: 10px 35px;
     }
+    &__icon {
+      margin-left: 8px;
+      width: 4.28px;
+    }
   }
 }
 
 // =========================================DESKTOP================================
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $laptop) {
   .contacts-section {
     margin-top: 132px;
     padding-top: 84.4px;
@@ -221,15 +218,15 @@ figure {
     padding-bottom: 86px;
 
     // // Background- spots- tylko wersja desktopowa
-    // background-image: url('../../images/contacts/spots.png');
+    background-image: url('./../images/contacts/spots.png');
 
-    // @media screen and(min-device-pixel-ratio: 2),
-    //   (min-resolution: 192dpi),
-    //   (min-resolution: 2dppx) {
-    //   background-image: url('../../images/contacts/spots@2x.png');
-    // }
-    // background-repeat: no-repeat;
-    // background-size: contain;
+    @media screen and(min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('./../images/contacts/spots@2x.png');
+    }
+    background-repeat: no-repeat;
+    background-size: contain;
 
     & .card:nth-child(1) {
       margin-top: -112px;
@@ -269,108 +266,9 @@ figure {
     &__item {
       padding: 10px 36px;
     }
-  }
-}
 
-// =====================================MODAL...............
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: scale(0.75);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  transform: scale(1);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 3;
-}
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 450px;
-  max-height: 609px;
-  background: #e17992;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  overflow: hidden;
-
-  &__close-btn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    background: #e17992;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-  }
-
-  &__list {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 30px;
-    gap: 10px;
-  }
-  &__link {
-    text-align: center;
-    text-decoration: none;
-    font-family: 'DM Sans';
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.83;
-    letter-spacing: 0.04em;
-    color: #ffffff;
-  }
-  &__picture {
-    border-radius: 50px;
-    border: 2px solid #ffffff;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .modal {
-    min-width: 700px;
-
-    &__list {
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      padding: 30px;
-    }
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .modal {
-    min-width: 1100px;
-
-    &__list {
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      padding: 30px;
-    }
-    &__link {
-      font-size: 16px;
-      line-height: 1.85;
-    }
-    &__picture {
-      width: 300px;
+    &__icon {
+      width: 4.43px;
     }
   }
 }
