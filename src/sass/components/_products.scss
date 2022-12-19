@@ -1,6 +1,6 @@
 // ====================================MOBILE====================================
 .products-section {
-  margin-top: 121px;
+  padding-top: 121px;
 
   &__subtitle {
     width: 142px;
@@ -102,30 +102,117 @@
     margin: 30px auto;
     margin-left: 127px;
   }
-
-  &__image {
-    width: 249px;
-    height: 252px;
-    position: absolute;
-    bottom: 22px;
-    right: 13px;
-  }
+  // zdjęcia (ice cream/ice coffee/milkshakes)
+  // &__image {
+  //   width: 249px;
+  //   height: 252px;
+  //   position: absolute;
+  //   bottom: 22px;
+  //   right: 13px;
+  // }
 
   &__pics {
     position: relative;
   }
 
-  &__dots::before {
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' style='position:absolute;width:0;height:0;overflow:hidden'%3E%3Cd%3Csymbol id='icon-Group-5' viewBox='0 0 139 32'%3E%3Cpath fill='%23fff' d='M85.333 16c0 8.837-7.163 16-16 16s-16-7.163-16-16 7.163-16 16-16 16 7.163 16 16zM32 16c0 8.837-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0s16 7.163 16 16zM138.667 16c0 8.837-7.163 16-16 16s-16-7.163-16-16 7.163-16 16-16 16 7.163 16 16z' style='fill:var(--color1, %23fff)'/%3E%3C/symbol%3Eefs%3E%3C/defs%3E%3C/svg%3E");
-    height: 6px;
-    width: 26px;
-    margin-left: 127px;
-    margin: 30px auto;
-    margin-left: 127px;
+  &__pics-icecream::after {
+    content: '';
+    background-image: url('../images/products/cream-l@1x.png');
+    background-image: -webkit-image-set(
+      url('../images/products/cream-s@1x.png') 1x,
+      url('../images/products/cream-m@1x.png') 2x,
+      url('../images/products/cream-l@1x.png') 3x
+    );
+    background-image: image-set(
+      url('../images/products/cream-s@1x.png') 1x,
+      url('../images/products/cream-m@1x.png') 2x,
+      url('../images/products/cream-l@1x.png') 3x
+    );
+    width: 249px;
+    height: 252px;
     display: block;
-    display: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 22px;
+    right: 14px;
+    @media screen and(min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/products/cream-s@2x.png');
+    }
   }
 
+  &__pics-icecoffee::after {
+    content: '';
+    background-image: url('../images/products/coffee-l@1x.png');
+    background-image: -webkit-image-set(
+      url('../images/products/coffee-s@1x.png') 1x,
+      url('../images/products/coffee-m@1x.png') 2x,
+      url('../images/products/coffee-l@1x.png') 3x
+    );
+    background-image: image-set(
+      url('../images/products/coffee-s@1x.png') 1x,
+      url('../images/products/coffee-m@1x.png') 2x,
+      url('../images/products/coffee-l@1x.png') 3x
+    );
+    width: 249px;
+    height: 252px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 22px;
+    right: 14px;
+    @media screen and(min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/products/coffee-s@2x.png');
+    }
+  }
+
+  &__pics-milkshakes::after {
+    content: '';
+    background-image: url('../images/products/milkshakes-l@1x.png');
+    background-image: -webkit-image-set(
+      url('../images/products/milkshakes-s@1x.png') 1x,
+      url('../images/products/milkshakes-m@1x.png') 2x,
+      url('../images/products/milkshakes-l@1x.png') 3x
+    );
+    background-image: image-set(
+      url('../images/products/milkshakes-s@1x.png') 1x,
+      url('../images/products/milkshakes-m@1x.png') 2x,
+      url('../images/products/milkshakes-l@1x.png') 3x
+    );
+    width: 249px;
+    height: 252px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 22px;
+    right: 14px;
+    @media screen and(min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/products/milkshakes-s@2x.png');
+    }
+  }
+
+  // trzykropek (ice cream/ice coffee/milkshakes)
+  &__dots::before {
+    content: '';
+    background-image: url('../images/products/3dots-products.png');
+    height: 6px;
+    width: 26px;
+    margin: 30px auto;
+    display: block;
+  }
+
+  // przyciski na kartach (ice cream/ice coffee/milkshakes)
   &__btn {
     background: url('../images/products/arrow-right 4.png');
     width: 40px;
@@ -133,6 +220,14 @@
     border: none;
     cursor: pointer;
     margin: 30px 120px 41px;
+    transform: rotate(0deg);
+    transition-duration: 0.7s;
+  }
+
+  &__btn:hover {
+    transform: scale(1.15);
+    transform: rotate(360deg);
+    transition-duration: 1s;
   }
 }
 
@@ -193,22 +288,111 @@
       line-height: 176%;
     }
 
-    &__image {
-      width: 220px;
-      height: 226px;
-      position: absolute;
-      bottom: 39px;
-      right: -2px;
-    }
+    // zdjęcia (ice cream/ice coffee/milkshakes)
+    // &__image {
+    //   width: 220px;
+    //   height: 226px;
+    //   position: absolute;
+    //   bottom: 39px;
+    //   right: -2px;
+    // }
 
     &__pics {
       position: relative;
+    }
+
+    &__pics-icecream::after {
+      content: '';
+      background-image: url('../images/products/cream-l@1x.png');
+      background-image: -webkit-image-set(
+        url('../images/products/cream-s@1x.png') 1x,
+        url('../images/products/cream-m@1x.png') 2x,
+        url('../images/products/cream-l@1x.png') 3x
+      );
+      background-image: image-set(
+        url('../images/products/cream-s@1x.png') 1x,
+        url('../images/products/cream-m@1x.png') 2x,
+        url('../images/products/cream-l@1x.png') 3x
+      );
+      width: 220px;
+      height: 226px;
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 38px;
+      right: -5px;
+      @media screen and(min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/products/cream-m@2x.png');
+      }
+    }
+
+    &__pics-icecoffee::after {
+      content: '';
+      background-image: url('../images/products/coffee-l@1x.png');
+      background-image: -webkit-image-set(
+        url('../images/products/coffee-s@1x.png') 1x,
+        url('../images/products/coffee-m@1x.png') 2x,
+        url('../images/products/coffee-l@1x.png') 3x
+      );
+      background-image: image-set(
+        url('../images/products/coffee-s@1x.png') 1x,
+        url('../images/products/coffee-m@1x.png') 2x,
+        url('../images/products/coffee-l@1x.png') 3x
+      );
+      width: 220px;
+      height: 226px;
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 38px;
+      right: -5px;
+      @media screen and(min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/products/coffee-m@2x.png');
+      }
+    }
+
+    &__pics-milkshakes::after {
+      content: '';
+      background-image: url('../images/products/milkshakes-l@1x.png');
+      background-image: -webkit-image-set(
+        url('../images/products/milkshakes-s@1x.png') 1x,
+        url('../images/products/milkshakes-m@1x.png') 2x,
+        url('../images/products/milkshakes-l@1x.png') 3x
+      );
+      background-image: image-set(
+        url('../images/products/milkshakes-s@1x.png') 1x,
+        url('../images/products/milkshakes-m@1x.png') 2x,
+        url('../images/products/milkshakes-l@1x.png') 3x
+      );
+      width: 220px;
+      height: 226px;
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 38px;
+      right: -5px;
+      @media screen and(min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/products/milkshakes-m@2x.png');
+      }
     }
 
     &__svg {
       margin-left: 97px;
     }
 
+    // przyciski na kartach (ice cream/ice coffee/milkshakes)
     &__btn {
       margin: 35px 90px;
     }
@@ -260,30 +444,119 @@
       font-size: 16px;
     }
 
-    &__image {
-      width: 335px;
-      height: 335px;
-      position: absolute;
-      bottom: 37px;
-      right: -5px;
-    }
+    // zdjęcia (ice cream/ice coffee/milkshakes)
+    // &__image {
+    //   width: 335px;
+    //   height: 335px;
+    //   position: absolute;
+    //   bottom: 37px;
+    //   right: -5px;
+    // }
 
     &__pics {
       position: relative;
+    }
+
+    &__pics-icecream::after {
+      content: '';
+      background-image: url('../images/products/cream-l@2x.png');
+      background-image: -webkit-image-set(
+        url('../images/products/cream-s@2x.png') 1x,
+        url('../images/products/cream-m@2x.png') 2x,
+        url('../images/products/cream-l@2x.png') 3x
+      );
+      background-image: image-set(
+        url('../images/products/cream-s@2x.png') 1x,
+        url('../images/products/cream-m@2x.png') 2x,
+        url('../images/products/cream-l@2x.png') 3x
+      );
+      width: 335px;
+      height: 335px;
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 37px;
+      right: -5px;
+      @media screen and(min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/products/cream-l@2x.png');
+      }
+    }
+
+    &__pics-icecoffee::after {
+      content: '';
+      background-image: url('../images/products/coffee-l@2x.png');
+      background-image: -webkit-image-set(
+        url('../images/products/coffee-s@2x.png') 1x,
+        url('../images/products/coffee-m@2x.png') 2x,
+        url('../images/products/coffee-l@2x.png') 3x
+      );
+      background-image: image-set(
+        url('../images/products/coffee-s@2x.png') 1x,
+        url('../images/products/coffee-m@2x.png') 2x,
+        url('../images/products/coffee-l@2x.png') 3x
+      );
+      width: 335px;
+      height: 335px;
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 37px;
+      right: -5px;
+      @media screen and(min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/products/coffee-l@2x.png');
+      }
+    }
+
+    &__pics-milkshakes::after {
+      content: '';
+      background-image: url('../images/products/milkshakes-l@2x.png');
+      background-image: -webkit-image-set(
+        url('../images/products/milkshakes-s@2x.png') 1x,
+        url('../images/products/milkshakes-m@2x.png') 2x,
+        url('../images/products/milkshakes-l@2x.png') 3x
+      );
+      background-image: image-set(
+        url('../images/products/milkshakes-s@2x.png') 1x,
+        url('../images/products/milkshakes-m@2x.png') 2x,
+        url('../images/products/milkshakes-l@2x.png') 3x
+      );
+      width: 335px;
+      height: 335px;
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 37px;
+      right: -5px;
+      @media screen and(min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/products/milkshakes-l@2x.png');
+      }
     }
 
     &__svg {
       margin-left: 151px;
     }
 
+    // przyciski na kartach (ice cream/ice coffee/milkshakes)
     &__btn {
       margin: 62px 144px 50px;
     }
   }
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
+// img {
+//   display: block;
+//   max-width: 100%;
+//   height: auto;
+// }
