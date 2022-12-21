@@ -378,10 +378,16 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 1.5;
+  color: $mainWhiteColor;
   }
   .modal__photo {width: 200px;
   margin: 0 auto;}
+
+  .modal__background--coffee {background-color:$mainBrownBgColor;
+    ;}
   
+  .modal__background--shake {background-color: $mainGreenBgColor;
+    ;}
 
 
  
