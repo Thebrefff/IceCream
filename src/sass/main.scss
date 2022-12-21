@@ -4,11 +4,14 @@
  */
 
 // Style dla pliku z przykładem HTML fragmentu
+
+// UTILS SCSS
 @import './utils/vars';
 @import './utils/modal';
-@import './components/container';
-@import './components/mobile-menu';
+@import './utils/container';
+@import './utils/mobile-menu';
 
+// COMPONENTS SCSS
 @import './components/header';
 @import './components/products';
 @import './components/about';
