@@ -25,6 +25,7 @@
     background-color: transparent;
     border: 0;
     fill: $mainWhiteColor;
+    scale: 2;
   }
 
   &__button {
@@ -68,13 +69,14 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 1.31;
-    padding-block: 6;
+    padding-block: 6px;
     margin-block: 0;
     border-top: 1px solid $secondaryBorderColor;
     border-bottom: 1px solid $secondaryBorderColor;
     scale: 1;
     will-change: scale;
-    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1) center left;
+    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center left;
 
     &:hover,
     &:active {
