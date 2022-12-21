@@ -24,8 +24,16 @@
     margin: 0 auto;
     margin-bottom: 144px;
     margin-top: 15px;
+    transform: scale(1);
+        transition-duration: .6s; 
+
+    &:hover {      
+      transform: scale(1.15);
+        transition-duration: .9s;      
+      }
+    }
   }
-}
+
 
 // ==================================== SIATKA ====================================
 .grid-products {

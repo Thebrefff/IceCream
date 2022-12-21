@@ -117,7 +117,14 @@
     text-transform: uppercase;
     margin: 0;
     color: $darkPinkColor;
+    transform: scale(1);
+        transition-duration: .6s; 
 
+    &:hover {      
+      transform: translate(20px, 10px);      
+        transition-duration: .9s;           
+      }
+    
     @media screen and (min-width: $tablet) {
       font-size: 48px;
       line-height: 1.14;
@@ -138,6 +145,13 @@
     color: $mainBlackColor;
     margin: 0;
     margin-top: 13px;
+    transform: scale(1);
+      transition-duration: .6s; 
+
+    &:hover {      
+      transform: translate(-18px, 6px);      
+        transition-duration: .9s;  
+    }
 
     @media screen and (min-width: $tablet) {
       font-size: 14px;

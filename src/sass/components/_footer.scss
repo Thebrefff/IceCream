@@ -90,12 +90,17 @@
       background-color: rgba(254, 165, 187, 1);
       display: flex;
       justify-content: center;
+      transform:rotateY(0deg);
+        transition-duration: .4s;        
 
       &:hover {
         background-color: $darkPinkColor;
         border-radius: 50%;
+        transform:rotateY(360deg);
+        transition-duration: .9s;      
       }
     }
+    
     &--Git {
       width: 20px;
       height: 34px;
