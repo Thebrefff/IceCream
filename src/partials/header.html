@@ -1,0 +1,184 @@
+<section class="header" id="header">
+  <div class="header__container">
+    <div class="header__wrapper">
+      <picture class="header__background-image header__background-image-circle">
+        <source
+          srcset="
+            ./images/header/header_circle-mobile.png    1x,
+            ./images/header/header_circle-mobile@2x.png 2x
+          "
+          media="(max-width: 767px)"
+          type="image/png"
+        />
+        <source
+          srcset="
+            ./images/header/header_circle-tablet.png    1x,
+            ./images/header/header_circle-tablet@2x.png 2x
+          "
+          media="(min-width: 768px) and (max-width: 1279px)"
+          type="image/png"
+        />
+        <source
+          srcset="
+            ./images/header/header_circle-desktop.png    1x,
+            ./images/header/header_circle-desktop@2x.png 2x
+          "
+          media="(min-width: 1280px)"
+          type="image/png"
+        />
+        <img
+          src="./images/header/header_circle-mobile.png"
+          alt="Background ice cream circle"
+        />
+      </picture>
+      <picture
+        class="header__background-image header__background-image-ice-cream"
+      >
+        <source
+          srcset="./images/header/header_ice-cream-mobile.png x1,
+        ./images/header/header_ice-cream-mobile@2x.png x2"
+          media="(max-width:
+        767px)"
+          type="image/png"
+        />
+        <source
+          srcset="./images/header/header_ice-cream-tablet.png x1,
+        ./images/header/header_ice-cream-tablet@2x.png x2"
+          media="(min-width: 768px) and (max-width: 1279px)"
+          type="image/png"
+        />
+        <source
+          srcset="./images/header/header_ice-cream-desktop.png x1,
+        ./images/header/header_ice-cream-desktop@2x.png x2"
+          media="(min-width: 1280px)"
+          type="image/png"
+        />
+        <img
+          src="./images/header/header_ice-cream-mobile.png"
+          alt="Ice cream with three coloured scoops"
+        />
+      </picture>
+      <picture class="header__background-image header__background-image-girl">
+        <source
+          srcset="./images/header/header_girl-tablet.png x1, ./images/header/header_girl-tablet@2x.png x2"
+          media="(min-width: 768px) and (max-width: 1279px)"
+          type="image/png"
+        />
+        <source
+          srcset="./images/header/header_girl-desktop.png x1, ./images/header/header_girl-desktop@2x.png x2"
+          media="(min-width: 1280px)"
+          type="image/png"
+        />
+        <img
+          src="./images/header/header_girl-tablet.png"
+          alt="Girl eating ice cream"
+        />
+      </picture>
+      <div class="header__coffee-info">
+        <p class="header__coffee-number">16</p>
+        <p class="header__coffee-description">cafes</p>
+      </div>
+      <div class="header__truck-info">
+        <p class="header__truck-number">23</p>
+        <p class="header__truck-description">food trucks</p>
+      </div>
+
+      <div class="header__bar-wrapper">
+        <picture class="header__logo">
+          <source
+            srcset="./images/header/header_logo.png x1, ./images/header/header_logo@2x.png x2"
+          />
+          <img
+            src="./images/header/header_logo.png"
+            alt="Logo of the company"
+          />
+        </picture>
+        <nav class="header__navbar">
+          <ul class="header__nav">
+            <li class="header__nav-element">
+              <a
+                href="#header"
+                class="header__nav-link header__nav-link--active"
+                >Home</a
+              >
+            </li>
+            <li class="header__nav-element">
+              <a href="#adventages" class="header__nav-link">About Us</a>
+            </li>
+            <li class="header__nav-element">
+              <a href="#about" class="header__nav-link">How it's made?</a>
+            </li>
+            <li class="header__nav-element">
+              <a href="#products" class="header__nav-link">Our products</a>
+            </li>
+            <li class="header__nav-element">
+              <a href="#contacts" class="header__nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__button-container">
+          <button type="button" class="header__button-menu toggle menu">
+            <svg class="header__button-icon" width="20" height="12">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <button type="button" class="header__main-button">
+            Buy now
+            <svg class="header__button-svg" width="11" height="8">
+              <use href="./images/icons.svg#icon-arrow-pink"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="header__left-side">
+        <h1 class="header__title">
+          ice dream made with
+          <span class="header__title header__title--description">passion</span>
+        </h1>
+        <div class="header__buttons">
+          <a href="#products" class="header__button-link">
+            <button type="button" class="header__left-button">Products</button>
+          </a>
+          <a href="#about" class="header__button-link">
+            <button type="button" class="header__right-button">
+              How it's made?
+            </button>
+          </a>
+        </div>
+        <div class="header__left-bar-wrapper">
+          <picture class="header__bg-milk-image">
+            <source
+              srcset="./images/header/header_milk-tablet.png x1, ./images/header/header_milk-tablet@2x.png x2"
+              media="(min-width: 768px) and (max-width: 1279px)"
+              type="image/png"
+            />
+            <source
+              srcset="./images/header/header_milk-desktop.png x1, ./images/header/header_milk-desktop@2x.png x2"
+              media="(min-width: 1280px)"
+              type="image/png"
+            />
+            <img
+              src="./images/header/header_milk-tablet.png"
+              alt="Jar of milk"
+            />
+          </picture>
+          <div class="header__lorem-wrapper">
+            <p class="header__description-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et
+            </p>
+            <img
+              class="header__button-arrow"
+              src="./images/products/arrow-right_4.png"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="header__center"></div>
+      <div class="header__right-side"></div>
+    </div>
+  </div>
+</section>
