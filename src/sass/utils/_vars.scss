@@ -21,22 +21,28 @@ figure {
   resize: none;
 }
 
+// Background Colors
 $mainPinkBgColor: #ffb8ca;
 $lightPinkBgColor: #fff5f6;
 $darkPinkBgColor: #e17992;
 $mainGreenBgColor: #c2e297;
 $mainBrownBgColor: #f0d1a5;
+// Font Colors
 $mainWhiteColor: #ffffff;
 $mainBlackColor: #000000;
 $mainGreyColor: #907e82;
 $darkPinkColor: #d41443;
 $mainPinkColor: #ffa5ba;
+// Hover Colors
 $mainHoverColor: #c7133e;
 $secondaryHoverColor: #ecebeb;
+// Font Families
 $mainFont: 'DM Sans', sans-serif;
 $secondaryFont: 'Titan One', cursive;
+// Border Colors
 $mainBorderColor: #e1e1e1;
 $secondaryBorderColor: #e18298;
+// Device breakpoints
 $mobile: 480px;
 $tablet: 768px;
 $laptop: 1280px;
