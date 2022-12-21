@@ -1,15 +1,11 @@
-(() => {
-  const menuOpenBtn = document.querySelector('[data-menu-open]');
-  const menuCloseBtn = document.querySelector('[data-menu-close]');
+const menuOverlay = document.querySelector('.mobile-menu');
+const closeMenuButton = document.querySelector('.toggle-menu');
+const openMenuBtn = document.querySelector('.header__button-menu');
 
-  const mobileMenu = document.querySelector('[data-menu]');
-  // const body = document.querySelector('body');
+openMenuBtn.addEventListener('click', e => {
+  menuOverlay.classList.remove('d-none');
+});
 
-  menuOpenBtn.addEventListener('click', openModal);
-  menuCloseBtn.addEventListener('click', openModal);
-
-  function openModal() {
-    mobileMenu.classList.toggle('is-open');
-    // body.classList.toggle('no-scroll');
-  }
-})();
+closeMenuButton.addEventListener('click', e => {
+  menuOverlay.classList.add('d-none');
+});
