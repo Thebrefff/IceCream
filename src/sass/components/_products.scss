@@ -242,7 +242,8 @@
 // ==================================== TABLET ====================================
 @media screen and (min-width: $tablet) {
   .products-section {
-    margin-top: 122px;
+    padding-top: 122px;
+    margin-bottom: 119px;
 
     &__subtitle {
       width: 205px;
@@ -410,7 +411,8 @@
 // ==================================== DESKTOP ====================================
 @media screen and (min-width: $laptop) {
   .products-section {
-    margin-top: 127px;
+    padding-top: 127px;
+    margin-bottom: 119px;
 
     &__subtitle {
       width: 249px;
