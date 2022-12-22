@@ -260,7 +260,7 @@
     background-color: $mainWhiteColor;
     border: 0;
     border-radius: 22px;
-    color: $darkPinkBgColor;
+    color: $darkPinkColor;
     font-weight: 400;
     font-size: 8px;
     line-height: 1.25;
@@ -289,6 +289,15 @@
   }
 }
 
+.button-link {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  font-style: inherit;
+  
+}
+
 @media screen and (min-width: $tablet) {
   .header {
     &__background-image-circle {
@@ -302,7 +311,6 @@
       margin-right: -34px;
       right: 247px;
       width: 143px;
-      
     }
 
     &__background-image-girl {
