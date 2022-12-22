@@ -34,6 +34,7 @@
 <path d="M1.61633 1L6.04401 5L1.61633 9" stroke="#D41443" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol>
 <symbol id="icon-arrow-white" viewBox="0 0 19 32"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.4" d="M3.2 3.2 14.753 16 3.2 28.8" style="stroke:var(--color1, #fff)"/></symbol><symbol id="icon-arrow-pink" viewBox="0 0 22 32"><path fill="none" stroke="#d41443" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.4" d="m4.545 3.2 13.7 12.8-13.7 12.8" style="stroke:var(--color2, #d41443)"/></symbol>
+<symbol id="icon-mobile-menu-close" viewBox="0 0 32 32"><path d="M23.733 10.304 22.229 8.8l-5.963 5.963L10.303 8.8l-1.504 1.504 5.963 5.963-5.963 5.963 1.504 1.504 5.963-5.963 5.963 5.963 1.504-1.504-5.963-5.963 5.963-5.963z"/></symbol><symbol id="icon-mobile-menu" viewBox="0 0 32 32"><path d="M6.4 11.733V9.6h19.2v2.133H6.4zm0 5.334h19.2v-2.133H6.4v2.133zm0 5.333h19.2v-2.133H6.4V22.4z"/></symbol>
 </defs>
 </svg>
 
